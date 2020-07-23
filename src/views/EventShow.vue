@@ -1,20 +1,17 @@
 <template>
-  <div class="About">
-    
+  <div class="eventShow">
+      <h1>Show event {{event.title}}</h1>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-//import MediaCard from '@/components/MediaCard.vue'
 
-@Component({
-  components: {
-    //MediaCard
-  }
-})
-export default class About extends Vue {
-  @Prop() private msg!: string;
+
+@Component
+export default class HorizontalCard extends Vue {
+  @Prop() private post!: string;
+  @Prop() private id!: number;
 }
 </script>
 

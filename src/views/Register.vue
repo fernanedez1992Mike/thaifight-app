@@ -1,19 +1,15 @@
 <template>
-  <div class="About">
+  <div class="register">
+    
     
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-//import MediaCard from '@/components/MediaCard.vue'
 
-@Component({
-  components: {
-    //MediaCard
-  }
-})
-export default class About extends Vue {
+@Component
+export default class Register extends Vue {
   @Prop() private msg!: string;
 }
 </script>
