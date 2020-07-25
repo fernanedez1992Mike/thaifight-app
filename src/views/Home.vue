@@ -1,27 +1,28 @@
 <template>
   <div id="Home">
     <b-jumbotron class="homeJumbo">
-    <h1 class="jumboHeader">Muay Thai Blog</h1>
+    <h1 class="jumboHeader"></h1>
 
     <hr class="my-4">
 
     <p>
-      It uses utility classes for typography and spacing to space content out within the larger
-      container.
     </p>
     <b-button variant="primary" href="#">Do Something</b-button>
     <b-button variant="success" href="#">Do Something Else</b-button>
   </b-jumbotron>
 
 <b-container>
-  <MainWrapper />
+  
+  <MainWrapper/>
+  <h2>{{thaiMessage="hello thailand"}}</h2>
+  <p>{{thaiNews="news"}}</p>
 </b-container>
 
 <br>
 
 <b-container>
   <b-row>
-    <b-col sm="5">
+    <b-col md="5">
       <News />
     </b-col>
   </b-row>
@@ -42,7 +43,6 @@ import News from '@/components/News.vue'
   }
 })
 export default class Home extends Vue {
-  @Prop() private msg!: string;
 }
 </script>
 

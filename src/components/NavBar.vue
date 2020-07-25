@@ -6,7 +6,7 @@
       text="Profile"
     >
       <b-dropdown-item><router-link :to="{name: 'profile'}">Profile</router-link></b-dropdown-item>
-      <b-dropdown-item><router-link :to="{name: 'user'}">User</router-link></b-dropdown-item>
+      <b-dropdown-item><router-link :to="{name: 'user', params: {username: 'mike'}}">User</router-link></b-dropdown-item>
       <b-dropdown-item><router-link :to="{name: 'login'}">Log In</router-link></b-dropdown-item>
     </b-nav-item-dropdown>
 
@@ -15,7 +15,7 @@
     >
       <b-dropdown-item><router-link :to="{name: 'event-create'}">Create Event</router-link></b-dropdown-item>
       <b-dropdown-item><router-link :to="{name: 'event-show'}">Show Event</router-link></b-dropdown-item>
-      <b-dropdown-item><router-link :to="{name: 'event-list'}">Event List</router-link></b-dropdown-item>
+      <b-dropdown-item><router-link :to="{name: 'event-list'}">Show List</router-link></b-dropdown-item>
     </b-nav-item-dropdown>
 
     <b-nav-item-dropdown

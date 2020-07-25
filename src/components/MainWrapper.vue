@@ -2,17 +2,9 @@
   <div class="mainWrapper">
     <b-container fluid>
         <b-row align-v="center">
-            <b-col sm="6"><MediaCard /></b-col>
-            <b-col sm="3"><MediaCard /></b-col>
-            <b-col sm="3"><MediaCard /></b-col>
-            
+          <MediaCard />
         </b-row>
         <br>
-        <b-row align-v="center">
-            <b-col sm="3"><MediaCard /></b-col>
-            <b-col sm="3"><MediaCard /></b-col>
-            <b-col sm="6"><MediaCard /></b-col>
-        </b-row>
     </b-container>
   </div>
 </template>
@@ -27,10 +19,7 @@ import MediaCard from '@/components/MediaCard.vue'
     }
 })
 export default class MainWrapper extends Vue {
-  @Prop() private msg!: string;
-  @Prop() public message!: string;
-
-  welcome = 'Thai Boxing Rules'
+  
 }
 </script>
 

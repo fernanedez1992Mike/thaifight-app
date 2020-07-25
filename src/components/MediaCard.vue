@@ -1,7 +1,8 @@
 <template>
   <div class="mediaCard">
-    <h1>{{msg="thai boxing post"}}</h1>
-    <p>Media Card {{description}} </p>
+    <article>
+      <h1 class="header">{{cardData[0]}}</h1>
+    </article>
   </div>
 </template>
 
@@ -10,23 +11,33 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class MediaCard extends Vue {
-  @Prop() private msg!: string;
-  @Prop() public message!: string;
+@Prop(Object || Array) private cardData!: Array<object>
 
-  description = 'Thai Boxing Rules'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.mediaCard {
-  height: 245px;
-  width: 100%;
-  background: rgb(243, 243, 243);
-  padding: 1em 0 0 1em;
-  border: 1px solid rgb(219, 219, 219);
-  flex: 0 0 auto;
-  cursor: pointer;
-}
 
+.mediaCard {
+  height: 145px;
+  width: 345px;
+  border: 2px solid white;
+  background: pink;
+  padding:5px;
+  cursor: pointer;
+
+  .header {
+    font-size: 10pt;
+    color: red;
+
+    p {
+      color: white;
+    }
+  }
+  .thumbnailUrl{
+    width: 50px;
+    height: 50px;
+  }
+}
 </style>

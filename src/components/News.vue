@@ -48,8 +48,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class News extends Vue {
-  @Prop() private msg!: string;
-  @Prop() public message!: string;
+  @Prop() private thaiNews!: string;
 
   news = 'Thai Boxing News'
 }

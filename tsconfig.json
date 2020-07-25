@@ -9,6 +9,9 @@
     "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "typeRoots":[
+      "../../typings", 
+      "../../node_modules/@types"],
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
@@ -34,6 +37,8 @@
     "tests/**/*.tsx"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "../../node_modules",
+    "../../typings"
   ]
 }

@@ -1,16 +1,26 @@
 <template>
   <div class="profile">
-    <h1>Create Event</h1>
+    <h1> Create an Event {{user.id}}</h1>
+    
     
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import {mapState, mapGetters} from 'vuex'
+import Datepicker from 'vuejs-datepicker'
 
-@Component
+@Component({
+  computed: {
+    ...mapGetters(['getEventById']),
+    ...mapState(['user', 'categories'])
+  },
+})
+
 export default class EventCreate extends Vue {
   @Prop() private msg!: string;
+
 }
 </script>
 

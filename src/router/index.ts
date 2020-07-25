@@ -31,22 +31,22 @@ Vue.use(VueRouter)
     component: () => import('@/views/Profile.vue'),
   },
   {
-    path: '/user/:username',
+    path: '/user/:username', //dynamic segment
     name: 'user',
     component: () => import('@/views/User.vue'),
     props: true
   },
   {
-    path: '/articles',
+    path: '/articles/:articleId',
     name: 'article',
     component: () => import('@/views/Article.vue'),
+    props: true
   },
   {
     path: '/articles-edit',
     name: 'articleEdit',
     component: () => import('@/views/ArticleEdit.vue'),
   }
-
 ]
 
 const router = new VueRouter({

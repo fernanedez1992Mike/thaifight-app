@@ -1,6 +1,6 @@
 <template>
   <div class="eventShow">
-      <h1>Show event {{event.title}}</h1>
+      <router-link class="event-link" :to="{ name: 'event-show', params: { id: data.id } }"></router-link>
   </div>
 </template>
 
@@ -10,8 +10,8 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HorizontalCard extends Vue {
-  @Prop() private post!: string;
-  @Prop() private id!: number;
+  //@Prop() private post!: string;
+  @Prop() readonly id!: string;
 }
 </script>
 

@@ -16,6 +16,8 @@ export default {
   getEvent(id: number){
     return apiClient.get('/posts/' +id)
   },
-
+  getAlbums() {
+    return apiClient.get('/photos/');
+   },
 }
 
