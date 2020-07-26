@@ -22,8 +22,11 @@
 
 <b-container>
   <b-row>
-    <b-col md="5">
+    <b-col md="9">
       <News />
+    </b-col>
+    <b-col md="3">
+      <PopularPosts />
     </b-col>
   </b-row>
 </b-container>
@@ -35,11 +38,13 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import MainWrapper from '@/components/MainWrapper.vue'
 import News from '@/components/News.vue'
+import PopularPosts from '@/components/PopularPosts.vue'
 
 @Component({
   components:{
     MainWrapper,
-    News
+    News,
+    PopularPosts
   }
 })
 export default class Home extends Vue {

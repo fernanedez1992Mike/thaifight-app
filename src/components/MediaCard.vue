@@ -1,43 +1,56 @@
 <template>
-  <div class="mediaCard">
-    <article>
-      <h1 class="header">{{cardData[0]}}</h1>
-    </article>
-  </div>
+  <router-link :to="{ name: 'event-show', params: { id: data.id }}">
+    <div id="mediaCard">
+      <h2>{{data.title}}</h2>
+      <p>{{data.body}}</p>
+      <span>{{data.id}}</span>
+    </div>
+  </router-link>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
+import apiClient from '@/TS/axios'
 
-@Component
+@Component({
+    props: {
+        data: Object
+    }
+})
 export default class MediaCard extends Vue {
-@Prop(Object || Array) private cardData!: Array<object>
 
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
+<style lang="scss" scoped>
 
-.mediaCard {
-  height: 145px;
-  width: 345px;
-  border: 2px solid white;
-  background: pink;
-  padding:5px;
-  cursor: pointer;
+#mediaCard {
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  height: 300px;
+  width: 450px;
+  margin: 15px;
+  padding: 1rem;
 
-  .header {
-    font-size: 10pt;
-    color: red;
-
-    p {
-      color: white;
-    }
-  }
-  .thumbnailUrl{
-    width: 50px;
-    height: 50px;
+  h2 {
+    font-size: 24pt;
+    font-kerning: auto;
+  } 
+  p {
+    font-size: 14pt;
+    font-kerning: auto;
+    overflow: hidden;
   }
 }
+#mediaCard:hover{
+  background: #f0f0f0;
+  color: #0f0f0f;
+  box-shadow: #0f0f0f;
+  -webkit-box-shadow: 15px 10px 7px -1px rgba(0,0,0,0.04);
+  -moz-box-shadow: 15px 10px 7px -1px rgba(0,0,0,0.04);
+  box-shadow: 15px 10px 7px -1px rgba(0,0,0,0.04);
+  cursor: pointer;
+}
+
 </style>

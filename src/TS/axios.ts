@@ -10,14 +10,16 @@ const apiClient = axios.create({
 })
 
 export default {
-  getEvents() {
+  getPosts() {
    return apiClient.get('/posts/');
   },
-  getEvent(id: number){
-    return apiClient.get('/posts/' +id)
+
+  getPostId(id: any) {
+    return apiClient.get('/posts/' + id)
   },
-  getAlbums() {
-    return apiClient.get('/photos/');
-   },
+
+  getAlbums(){
+    return apiClient.get('/albums/');
+  }
 }
 

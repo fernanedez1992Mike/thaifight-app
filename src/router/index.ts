@@ -19,6 +19,7 @@ Vue.use(VueRouter)
     path: '/event/:id',
     name: 'event-show',
     component: () => import('@/views/EventShow.vue'),
+    props: true
   },
   {
     path: '/event-create',
